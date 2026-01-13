@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, f1_score, classification_report
 
 MODEL = "gemma3:4b"
 LANG = "swa"
-N_SUBSAMPLES = 3
+N_SUBSAMPLES = 1 # Using the entire dataset for the test split (600 samples) makes increasing the subsample redundant.
 SUBSAMPLE_SIZE = 600
 SEEDS = [42, 123, 999]
 OLLAMA_OPTIONS = {"temperature": 0, "num_predict": 64}
